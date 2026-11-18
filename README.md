@@ -1,14 +1,22 @@
 # Moodnote — Music for Your Mood
 
-A small beginner Angular project that suggests music for your mood. Choose Chill, Happy, or Focused, then click “Suggest another” to cycle through songs.
+Moodnote suggests songs based on how you feel. Choose **Chill**, **Happy**, or **Focused**, then click **Suggest another** to see another song.
 
-## Run the project
+## Run the app
 
-```bash
-npm install
-npm start
-```
+1. Open a terminal in this project folder.
+2. Install the project packages:
 
-Open `http://localhost:4200/` in your browser.
+   ```bash
+   npm install
+   ```
 
-The project practices TypeScript interfaces and arrays, Angular's `@for` block, click events, and interpolation.
+3. Start the app:
+
+   ```bash
+   npm start
+   ```
+
+4. Open [http://localhost:4200](http://localhost:4200) in your browser.
+
+This project practices TypeScript interfaces and arrays, Angular's `@for` block, and click events.
