@@ -1,5 +1,5 @@
 <main>
-  <header class="brand"><span aria-hidden="true">♫</span> Moodnote</header>
+  <header class="brand">Moodnote</header>
   <p class="eyebrow">MUSIC FOR YOUR MOOD</p>
   <h1>Choose how you feel</h1>
   <p>Pick a mood to get a song suggestion.</p>
@@ -7,7 +7,7 @@
   <section aria-label="Choose a mood">
     <div class="moods">
       @for (mood of moods; track mood.name) {
-        <button type="button" [class.selected]="selectedMood.name === mood.name" [attr.aria-pressed]="selectedMood.name === mood.name" (click)="chooseMood(mood)"><span>{{ mood.icon }}</span>{{ mood.name }}</button>
+        <button type="button" [class.selected]="selectedMood.name === mood.name" [attr.aria-pressed]="selectedMood.name === mood.name" (click)="chooseMood(mood)">{{ mood.name }}</button>
       }
     </div>
   </section>

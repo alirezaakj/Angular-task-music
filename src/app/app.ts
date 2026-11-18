@@ -8,7 +8,6 @@ interface Track {
 
 interface Mood {
   name: string;
-  icon: string;
   description: string;
   tracks: Track[];
 }
@@ -23,7 +22,6 @@ export class App {
   moods: Mood[] = [
     {
       name: 'Chill',
-      icon: '☾',
       description: 'Take a breath and let the day slow down.',
       tracks: [
         { title: 'Sunset Lover', artist: 'Petit Biscuit' },
@@ -33,7 +31,6 @@ export class App {
     },
     {
       name: 'Happy',
-      icon: '☀',
       description: 'A little brightness for wherever you are.',
       tracks: [
         { title: 'Lovely Day', artist: 'Bill Withers' },
@@ -43,7 +40,6 @@ export class App {
     },
     {
       name: 'Focused',
-      icon: '✦',
       description: 'Find your rhythm and stay in the zone.',
       tracks: [
         { title: 'Intro', artist: 'The xx' },
