@@ -1,0 +1,31 @@
+<main>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Moodnote home"><svg viewBox="0 0 40 40" role="img" aria-label="Sound wave logo"><path d="M5 21h5l4-9 6 18 5-14 4 8 3-4h3" /></svg><span>moodnote</span></a>
+    <span class="top-note">YOUR MUSIC COMPANION</span></header>
+
+  <section class="intro" id="home">
+    <p class="eyebrow">A SOUND FOR RIGHT NOW</p>
+    <h1>Music for your <span>mood.</span></h1>
+    <p class="intro-copy">Pick how you feel. Find your next favorite track.</p>
+  </section>
+
+  <section class="picker" aria-label="Choose a mood">
+    <h2>How are you feeling?</h2>
+    <div class="moods">
+      @for (mood of moods; track mood.name) {
+        <button type="button" [class.selected]="selectedMood.name === mood.name" [attr.aria-pressed]="selectedMood.name === mood.name" (click)="chooseMood(mood)"><span>{{ mood.icon }}</span>{{ mood.name }}</button>
+      }
+    </div></section>
+
+  <section class="track-card" aria-live="polite"><div class="record" aria-hidden="true">♫</div>
+    <div class="track-info">
+      <p class="match">YOUR {{ selectedMood.name.toUpperCase() }} MATCH</p>
+      <h2>{{ currentTrack.title }}</h2>
+      <p class="artist">{{ currentTrack.artist }}</p>
+      <p class="description">{{ selectedMood.description }}</p>
+      <button type="button" class="next-button" (click)="nextTrack()">Suggest another ↗</button>
+    </div></section>
+
+  <footer>Find a little rhythm in every day <span>♪</span></footer></main>
+
+<router-outlet />
